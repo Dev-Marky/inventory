@@ -14,7 +14,7 @@ class Customers extends CI_Controller {
 
   function add() {
     if ($this->input->post()) {
-      $customer = customer_form();
+      $customer = customer_form($this->session->userdata('company_id'));
       $this->customer_model->save($customer);
       redirect('customers');
     }
@@ -23,7 +23,7 @@ class Customers extends CI_Controller {
 
   function edit($id) {
     if ($this->input->post()) {
-      $customer = customer_form();
+      $customer = customer_form($this->session->userdata('company_id'));
       $this->customer_model->update($customer, $id);
       redirect('customers');
     }
