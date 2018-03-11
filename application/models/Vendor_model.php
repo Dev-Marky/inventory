@@ -2,7 +2,7 @@
 class Vendor_model extends CI_Model {
   function __construct() {
     parent::__construct();
-    $this->output->enable_profiler(TRUE);
+    // $this->output->enable_profiler(TRUE);
   }
 
   function find_by_company($company_id) {

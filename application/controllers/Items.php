@@ -2,6 +2,8 @@
 class Items extends CI_Controller {
   function __construct() {
     parent::__construct();
+
+    redirect_if(!$this->session->userdata('user_id'), 'login');
     $this->load->model('item_model');
   }
 
