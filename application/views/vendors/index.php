@@ -38,7 +38,7 @@
                     <span class="caret"></span>
                   </button>
                   <ul role="menu" class="dropdown-menu dropdown-menu-right">
-                    <li><?php echo anchor('vendors/add', 'Add an vendor'); ?></li>
+                    <li><?php echo anchor('vendors/add', 'Add a vendor'); ?></li>
                     <!-- <li><a href="#">Another action</a></li>
                     <li><a href="#">Something else here</a></li>
                     <li class="divider"></li>
