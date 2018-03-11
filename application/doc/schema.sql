@@ -30,3 +30,13 @@ create table companies(
 alter table companies add user_id integer;
 
 alter table items add company_id integer;
+
+create table customers(
+  id integer not null primary key auto_increment,
+  name varchar(255),
+  address varchar(255),
+  phone varchar(255),
+  email varchar(255)
+);
+
+alter table customers add company_id integer;
