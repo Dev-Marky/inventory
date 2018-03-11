@@ -40,3 +40,12 @@ create table customers(
 );
 
 alter table customers add company_id integer;
+
+create table vendors(
+  id integer not null primary key auto_increment,
+  company_id integer,
+  name varchar(255),
+  address varchar(255),
+  phone varchar(255),
+  email varchar(255)
+);
