@@ -9,7 +9,7 @@ class Customers extends CI_Controller {
 
   function index() {
     $data['customers'] = $this->customer_model->find_by_company($this->session->userdata('company_id'));
-    $this->load->view('customers/index', $data);
+    $this->layout->view('customers/index', $data);
   }
 
   function add() {
@@ -18,7 +18,7 @@ class Customers extends CI_Controller {
       $this->customer_model->save($customer);
       redirect('customers');
     }
-    $this->load->view('customers/add');
+    $this->layout->view('customers/add');
   }
 
   function edit($id) {
@@ -28,7 +28,7 @@ class Customers extends CI_Controller {
       redirect('customers');
     }
     $data['customer'] = $this->customer_model->read($id);
-    $this->load->view('customers/edit', $data);
+    $this->layout->view('customers/edit', $data);
   }
 
   function delete($id) {
