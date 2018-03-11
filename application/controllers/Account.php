@@ -33,6 +33,7 @@ class Account extends CI_Controller {
       $user_id = $this->user_model->save($user);
       $company['user_id'] = $user_id;
       $this->company_model->save($company);
+      redirect('login');
     }
     $this->load->view('account/register');
   }
