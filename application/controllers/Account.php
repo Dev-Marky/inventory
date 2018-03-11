@@ -24,7 +24,7 @@ class Account extends CI_Controller {
   }
 
   function dashboard() {
-    $this->load->view('account/dashboard');
+    $this->layout->view('account/dashboard');
   }
 
   function register() {
