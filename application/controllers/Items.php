@@ -7,7 +7,7 @@ class Items extends CI_Controller {
 
   function index() {
     $data['items'] = $this->item_model->find_by_company($this->session->userdata('company_id'));
-    $this->load->view('items/index', $data);
+    $this->layout->view('items/index', $data);
   }
 
   function add() {
@@ -16,7 +16,7 @@ class Items extends CI_Controller {
       $this->item_model->save($item);
       redirect('items');
     }
-    $this->load->view('items/add');
+    $this->layout->view('items/add');
   }
 
   function edit($id) {
@@ -26,7 +26,7 @@ class Items extends CI_Controller {
       redirect('items');
     }
     $data['item'] = $this->item_model->read($id);
-    $this->load->view('items/edit', $data);
+    $this->layout->view('items/edit', $data);
   }
 
   function delete($id) {
