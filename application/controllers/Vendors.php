@@ -14,7 +14,7 @@ class Vendors extends CI_Controller {
 
   function add() {
     if ($this->input->post()) {
-      $vendor = vendor_form();
+      $vendor = vendor_form($this->session->userdata('company_id'));
       $this->vendor_model->save($vendor);
       redirect('vendors');
     }
@@ -23,7 +23,7 @@ class Vendors extends CI_Controller {
 
   function edit($id) {
     if ($this->input->post()) {
-      $vendor = vendor_form();
+      $vendor = vendor_form($this->session->userdata('company_id'));
       $this->vendor_model->update($vendor, $id);
       redirect('vendors');
     }
