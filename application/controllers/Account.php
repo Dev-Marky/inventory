@@ -10,7 +10,7 @@ class Account extends CI_Controller {
     $data = array('message' => '');
     if ($this->input->post()) {
       list($name, $password) = login_form();
-      $user = $this->user_model->read_by_name_and_password($name, $password);
+      $user = $this->user_model->read_by_username_and_password($name, $password);
       if ($user) {
         $company = $this->company_model->read_by_user($user->id);
         $this->session->set_userdata('user_id', $user->id);
