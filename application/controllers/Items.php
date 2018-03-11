@@ -14,7 +14,7 @@ class Items extends CI_Controller {
 
   function add() {
     if ($this->input->post()) {
-      $item = item_form();
+      $item = item_form($this->session->userdata('company_id'));
       $this->item_model->save($item);
       redirect('items');
     }
