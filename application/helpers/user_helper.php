@@ -19,8 +19,10 @@ function register_form() {
   $obj = &get_instance();
   return array(
     array(
-      'name' => $obj->input->post('username'),
+      'username' => $obj->input->post('username'),
       'password' => $obj->input->post('password'),
+      'email' => $obj->input->post('email'),
+      'name' => $obj->input->post('name'),
     ),
     array(
       'name' => $obj->input->post('company_name'),

@@ -49,3 +49,5 @@ create table vendors(
   phone varchar(255),
   email varchar(255)
 );
+
+alter table users add username varchar(255);
