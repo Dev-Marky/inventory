@@ -15,7 +15,7 @@ class Account extends CI_Controller {
         $company = $this->company_model->read_by_user($user->id);
         $this->session->set_userdata('user_id', $user->id);
         $this->session->set_userdata('company_id', $company->id);
-        // redirect('account/dashboard');
+        redirect('account/dashboard');
       } else {
         $data['message'] = 'Invalid user name or password. Please try again!';
       }
@@ -35,5 +35,10 @@ class Account extends CI_Controller {
       $this->company_model->save($company);
     }
     $this->load->view('account/register');
+  }
+
+  function logout() {
+    $this->session->sess_destroy();
+    redirect('.');
   }
 }
