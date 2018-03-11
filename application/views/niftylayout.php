@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Dashboard | Nifty - Admin Template</title>
-
+  <title>Dashboard | sCool Labs Systems Inventory</title>
 
   <!--STYLESHEET-->
   <!--=================================================-->
@@ -16,18 +15,14 @@
   <!--Open Sans Font [ OPTIONAL ]-->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
-
   <!--Bootstrap Stylesheet [ REQUIRED ]-->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-
 
   <!--Nifty Stylesheet [ REQUIRED ]-->
   <link href="css/nifty.min.css" rel="stylesheet">
 
-
   <!--Nifty Premium Icon [ DEMONSTRATION ]-->
   <link href="css/demo/nifty-demo-icons.min.css" rel="stylesheet">
-
 
   <!--=================================================-->
 
@@ -76,12 +71,10 @@
         <!--Brand logo & name-->
         <!--================================-->
         <div class="navbar-header">
-          <a href="index.html" class="navbar-brand">
-            <img src="img/logo.png" alt="Nifty Logo" class="brand-icon">
+          <?php echo anchor('.', '<img src="img/logo.png" alt="INV Logo" class="brand-icon">
             <div class="brand-title">
-              <span class="brand-text">Nifty</span>
-            </div>
-          </a>
+              <span class="brand-text">INV</span>
+            </div>', 'class="navbar-brand"'); ?>
         </div>
         <!--================================-->
         <!--End brand logo & name-->
@@ -106,8 +99,8 @@
             <li>
               <div class="custom-search-form">
                 <label class="btn btn-trans" for="search-input" data-toggle="collapse" data-target="#nav-searchbox">
-                                    <i class="demo-pli-magnifi-glass"></i>
-                                </label>
+                  <i class="demo-pli-magnifi-glass"></i>
+                </label>
                 <form>
                   <div class="search-container collapse" id="nav-searchbox">
                     <input id="search-input" type="text" class="form-control" placeholder="Type for search...">
@@ -121,9 +114,7 @@
           </ul>
           <ul class="nav navbar-top-links">
 
-            <!--Mega dropdown-->
-            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-            <li class="mega-dropdown">
+            <!-- <li class="mega-dropdown">
               <a href="#" class="mega-dropdown-toggle">
                 <i class="demo-pli-layout-grid"></i>
               </a>
@@ -131,7 +122,6 @@
                 <div class="row">
                   <div class="col-sm-4 col-md-3">
 
-                    <!--Mega menu list-->
                     <ul class="list-unstyled">
                       <li class="dropdown-header"><i class="demo-pli-file icon-lg icon-fw"></i> Pages</li>
                       <li><a href="#">Profile</a></li>
@@ -146,7 +136,6 @@
                   </div>
                   <div class="col-sm-4 col-md-3">
 
-                    <!--Mega menu list-->
                     <ul class="list-unstyled">
                       <li class="dropdown-header"><i class="demo-pli-mail icon-lg icon-fw"></i> Mailbox</li>
                       <li><a href="#"><span class="pull-right label label-danger">Hot</span>Indox</a></li>
@@ -158,7 +147,6 @@
                     <p class="pad-top mar-top bord-top text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
                   </div>
                   <div class="col-sm-4 col-md-3">
-                    <!--Mega menu list-->
                     <ul class="list-unstyled">
                       <li>
                         <a href="#" class="media mar-btm">
@@ -233,19 +221,15 @@
                   </div>
                 </div>
               </div>
-            </li>
-            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-            <!--End mega dropdown-->
-
-            <!--Notification dropdown-->
-            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            </li> -->
+            
+<!--
             <li class="dropdown">
               <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                 <i class="demo-pli-bell"></i>
                 <span class="badge badge-header badge-danger"></span>
               </a>
 
-              <!--Notification dropdown menu-->
               <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
                 <div class="nano scrollable">
                   <div class="nano-content">
@@ -325,7 +309,6 @@
                   </div>
                 </div>
 
-                <!--Dropdown footer-->
                 <div class="pad-all bord-top">
                   <a href="#" class="btn-link text-main box-block">
                     <i class="pci-chevron chevron-right pull-right"></i>Show All Notifications
@@ -333,11 +316,8 @@
                 </div>
               </div>
             </li>
-            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-            <!--End notifications dropdown-->
-
-            <!--User dropdown-->
-            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+-->
+            
             <li id="dropdown-user" class="dropdown">
               <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
                 <span class="ic-user pull-right">
@@ -353,12 +333,12 @@
                 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
               </a>
 
-
               <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right panel-default">
                 <ul class="head-list">
                   <li>
-                    <a href="#"><i class="demo-pli-male icon-lg icon-fw"></i> Profile</a>
+                    <?php echo anchor('account/profile', '<i class="demo-pli-male icon-lg icon-fw"></i> Profile'); ?>
                   </li>
+<!--
                   <li>
                     <a href="#"><span class="badge badge-danger pull-right">9</span><i class="demo-pli-mail icon-lg icon-fw"></i> Messages</a>
                   </li>
@@ -368,29 +348,26 @@
                   <li>
                     <a href="#"><i class="demo-pli-computer-secure icon-lg icon-fw"></i> Lock screen</a>
                   </li>
+-->
                   <li>
                     <?php echo anchor('account/logout', '<i class="demo-pli-unlock icon-lg icon-fw"></i> Logout', ''); ?>
                   </li>
                 </ul>
               </div>
             </li>
-            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-            <!--End user dropdown-->
 
+<!--
             <li>
               <a href="#" class="aside-toggle">
                 <i class="demo-pli-dot-vertical"></i>
               </a>
             </li>
+-->
           </ul>
         </div>
-        <!--================================-->
-        <!--End Navbar Dropdown-->
 
       </div>
     </header>
-    <!--===================================================-->
-    <!--END NAVBAR-->
 
 
     <div class="boxed">
@@ -401,49 +378,36 @@
       <!--===================================================-->
       <!--END CONTENT CONTAINER-->
 
-      <!--ASIDE-->
-      <!--===================================================-->
       <aside id="aside-container">
         <div id="aside">
           <div class="nano">
             <div class="nano-content">
 
-              <!--Nav tabs-->
-              <!--================================-->
               <ul class="nav nav-tabs nav-justified">
                 <li class="active">
                   <a href="#demo-asd-tab-1" data-toggle="tab">
-                                        <i class="demo-pli-speech-bubble-7 icon-lg"></i>
-                                    </a>
+                    <i class="demo-pli-speech-bubble-7 icon-lg"></i>
+                  </a>
                 </li>
                 <li>
                   <a href="#demo-asd-tab-2" data-toggle="tab">
-                                        <i class="demo-pli-information icon-lg icon-fw"></i> Report
-                                    </a>
+                    <i class="demo-pli-information icon-lg icon-fw"></i> Report
+                  </a>
                 </li>
                 <li>
                   <a href="#demo-asd-tab-3" data-toggle="tab">
-                                        <i class="demo-pli-wrench icon-lg icon-fw"></i> Settings
-                                    </a>
+                    <i class="demo-pli-wrench icon-lg icon-fw"></i> Settings
+                  </a>
                 </li>
               </ul>
-              <!--================================-->
-              <!--End nav tabs-->
 
-
-
-              <!-- Tabs Content -->
-              <!--================================-->
               <div class="tab-content">
 
-                <!--First tab (Contact list)-->
-                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                 <div class="tab-pane fade in active" id="demo-asd-tab-1">
                   <p class="pad-all text-main text-sm text-uppercase text-bold">
                     <span class="pull-right badge badge-warning">3</span> Family
                   </p>
 
-                  <!--Family-->
                   <div class="list-group bg-trans">
                     <a href="#" class="list-group-item">
                       <div class="media-left pos-rel">
@@ -510,22 +474,20 @@
                     <span class="pull-right badge badge-success">Offline</span> Friends
                   </p>
 
-                  <!--Works-->
                   <div class="list-group bg-trans">
                     <a href="#" class="list-group-item">
-                                            <span class="badge badge-purple badge-icon badge-fw pull-left"></span> Joey K. Greyson
-                                        </a>
+                      <span class="badge badge-purple badge-icon badge-fw pull-left"></span> Joey K. Greyson
+                    </a>
                     <a href="#" class="list-group-item">
-                                            <span class="badge badge-info badge-icon badge-fw pull-left"></span> Andrea Branden
-                                        </a>
+                      <span class="badge badge-info badge-icon badge-fw pull-left"></span> Andrea Branden
+                    </a>
                     <a href="#" class="list-group-item">
-                                            <span class="badge badge-success badge-icon badge-fw pull-left"></span> Johny Juan
-                                        </a>
+                      <span class="badge badge-success badge-icon badge-fw pull-left"></span> Johny Juan
+                    </a>
                     <a href="#" class="list-group-item">
-                                            <span class="badge badge-danger badge-icon badge-fw pull-left"></span> Susan Sun
-                                        </a>
+                      <span class="badge badge-danger badge-icon badge-fw pull-left"></span> Susan Sun
+                    </a>
                   </div>
-
 
                   <hr>
                   <p class="pad-all text-main text-sm text-uppercase text-bold">News</p>
@@ -537,17 +499,10 @@
                     <small><em>Last Update : Des 12, 2014</em></small>
                   </div>
 
-
                 </div>
-                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                <!--End first tab (Contact list)-->
-
-
-                <!--Second tab (Custom layout)-->
-                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                
                 <div class="tab-pane fade" id="demo-asd-tab-2">
 
-                  <!--Monthly billing-->
                   <div class="pad-all">
                     <p class="pad-ver text-main text-sm text-uppercase text-bold">Billing &amp; reports</p>
                     <p>Get <strong class="text-main">$5.00</strong> off your next bill by making sure your full payment reaches us before August 5, 2018.</p>
@@ -560,19 +515,16 @@
                     <button class="btn btn-block btn-success mar-top">Pay Now</button>
                   </div>
 
-
                   <hr>
 
                   <p class="pad-all text-main text-sm text-uppercase text-bold">Additional Actions</p>
 
-                  <!--Simple Menu-->
                   <div class="list-group bg-trans">
                     <a href="#" class="list-group-item"><i class="demo-pli-information icon-lg icon-fw"></i> Service Information</a>
                     <a href="#" class="list-group-item"><i class="demo-pli-mine icon-lg icon-fw"></i> Usage Profile</a>
                     <a href="#" class="list-group-item"><span class="label label-info pull-right">New</span><i class="demo-pli-credit-card-2 icon-lg icon-fw"></i> Payment Options</a>
                     <a href="#" class="list-group-item"><i class="demo-pli-support icon-lg icon-fw"></i> Message Center</a>
                   </div>
-
 
                   <hr>
 
@@ -583,12 +535,7 @@
                     <small><em>We are here 24/7</em></small>
                   </div>
                 </div>
-                <!--End second tab (Custom layout)-->
-                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-
-                <!--Third tab (Settings)-->
-                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                
                 <div class="tab-pane fade" id="demo-asd-tab-3">
                   <ul class="list-group bg-trans">
                     <li class="pad-top list-header">
@@ -620,7 +567,6 @@
                     </li>
                   </ul>
 
-
                   <hr>
 
                   <ul class="list-group pad-btm bg-trans">
@@ -650,8 +596,6 @@
                     </li>
                   </ul>
 
-
-
                   <hr>
 
                   <p class="pad-hor text-main text-sm text-uppercase text-bold mar-no">Task Progress</p>
@@ -670,17 +614,13 @@
                     <small>17/23 Database</small>
                   </div>
 
-                </div>
-                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                <!--Third tab (Settings)-->
+                </div>                
 
               </div>
             </div>
           </div>
         </div>
       </aside>
-      <!--===================================================-->
-      <!--END ASIDE-->
 
 
       <!--MAIN NAVIGATION-->
@@ -688,20 +628,17 @@
       <nav id="mainnav-container">
         <div id="mainnav">
 
-
           <!--OPTIONAL : ADD YOUR LOGO TO THE NAVIGATION-->
           <!--It will only appear on small screen devices.-->
           <!--================================
-                    <div class="mainnav-brand">
-                        <a href="index.html" class="brand">
-                            <img src="img/logo.png" alt="Nifty Logo" class="brand-icon">
-                            <span class="brand-text">Nifty</span>
-                        </a>
-                        <a href="#" class="mainnav-toggle"><i class="pci-cross pci-circle icon-lg"></i></a>
-                    </div>
-                    -->
-
-
+          <div class="mainnav-brand">
+              <a href="index.html" class="brand">
+                  <img src="img/logo.png" alt="Nifty Logo" class="brand-icon">
+                  <span class="brand-text">Nifty</span>
+              </a>
+              <a href="#" class="mainnav-toggle"><i class="pci-cross pci-circle icon-lg"></i></a>
+          </div>
+          -->
 
           <!--Menu-->
           <!--================================-->
@@ -709,8 +646,6 @@
             <div class="nano">
               <div class="nano-content">
 
-                <!--Profile Widget-->
-                <!--================================-->
                 <div id="mainnav-profile" class="mainnav-profile">
                   <div class="profile-wrap text-center">
                     <div class="pad-btm">
@@ -738,8 +673,6 @@
                   </div>
                 </div>
 
-                <!--Shortcut buttons-->
-                <!--================================-->
                 <div id="mainnav-shortcut" class="hidden">
                   <ul class="list-unstyled shortcut-wrap">
                     <li class="col-xs-3" data-content="My Profile">
@@ -772,17 +705,12 @@
                     </li>
                   </ul>
                 </div>
-                <!--================================-->
-                <!--End shortcut buttons-->
-
 
                 <ul id="mainnav-menu" class="list-group">
 
-                  <!--Category name-->
                   <li class="list-header">Navigation</li>
 
-<!--
-                  <li>
+                  <!-- <li>
                     <a href="#">
 						                    <i class="demo-pli-home"></i>
 						                    <span class="menu-title">Dashboard</span>
@@ -816,58 +744,45 @@
                       <li><a href="layouts-fixed-footer.html">Fixed Footer</a></li>
 
                     </ul>
-                  </li>
--->
+                  </li> -->
 
-                  <!--Menu list item-->
                   <li>
                     <?php echo anchor('dashboard', '<i class="demo-pli-gear"></i>
 						                    <span class="menu-title">
 												Dashboard
 												<span class="pull-right badge badge-warning">24</span>
 											</span>', ''); ?>
-<!--
-                    <a href="widgets.html">
-						                    <i class="demo-pli-gear"></i>
-						                    <span class="menu-title">
-												Widgets
-												<span class="pull-right badge badge-warning">24</span>
-											</span>
-						                </a>
--->
                   </li>
 
                   <li class="list-divider"></li>
 
-                  <!--Category name-->
                   <li class="list-header">Components</li>
 
                   <li>
                     <a href="#">
-						                    <i class="demo-pli-boot-2"></i>
-						                    <span class="menu-title">UI Elements</span>
+                      <i class="demo-pli-boot-2"></i>
+                      <span class="menu-title">Purchases</span>
 											<i class="arrow"></i>
-						                </a>
+                    </a>
                     <ul class="collapse">
-                      <li><a href="ui-buttons.html">Buttons</a></li>
-                      <li><a href="ui-panels.html">Panels</a></li>
-                      <li><a href="ui-modals.html">Modals</a></li>
+                      <li><?php echo anchor('items', 'Items'); ?></li>
+                      <li><?php echo anchor('vendors', 'Vendors'); ?></li>
+                      <!-- <li><a href="ui-modals.html">Modals</a></li>
                       <li><a href="ui-progress-bars.html">Progress bars</a></li>
                       <li><a href="ui-components.html">Components</a></li>
                       <li><a href="ui-typography.html">Typography</a></li>
                       <li><a href="ui-list-group.html">List Group</a></li>
                       <li><a href="ui-tabs-accordions.html">Tabs &amp; Accordions</a></li>
-                      <li><a href="ui-alerts-tooltips.html">Alerts &amp; Tooltips</a></li>
-
+                      <li><a href="ui-alerts-tooltips.html">Alerts &amp; Tooltips</a></li> -->
                     </ul>
                   </li>
 
-                  <li>
+                  <!-- <li>
                     <a href="#">
-						                    <i class="demo-pli-pen-5"></i>
-						                    <span class="menu-title">Forms</span>
+                      <i class="demo-pli-pen-5"></i>
+                      <span class="menu-title">Forms</span>
 											<i class="arrow"></i>
-						                </a>
+                    </a>
                     <ul class="collapse">
                       <li><a href="forms-general.html">General</a></li>
                       <li><a href="forms-components.html">Advanced Components</a></li>
@@ -882,10 +797,10 @@
 
                   <li>
                     <a href="#">
-						                    <i class="demo-pli-receipt-4"></i>
-						                    <span class="menu-title">Tables</span>
+                      <i class="demo-pli-receipt-4"></i>
+                      <span class="menu-title">Tables</span>
 											<i class="arrow"></i>
-						                </a>
+                    </a>
                     <ul class="collapse">
                       <li class="active-link"><a href="tables-static.html">Static Tables</a></li>
                       <li><a href="tables-bootstrap.html">Bootstrap Tables</a></li>
@@ -897,10 +812,10 @@
 
                   <li>
                     <a href="#">
-						                    <i class="demo-pli-bar-chart"></i>
-						                    <span class="menu-title">Charts</span>
+                      <i class="demo-pli-bar-chart"></i>
+                      <span class="menu-title">Charts</span>
 											<i class="arrow"></i>
-						                </a>
+                    </a>
                     <ul class="collapse">
                       <li><a href="charts-morris-js.html">Morris JS</a></li>
                       <li><a href="charts-flot-charts.html">Flot Charts</a></li>
@@ -912,10 +827,10 @@
 
                   <li>
                     <a href="#">
-						                    <i class="demo-pli-repair"></i>
-						                    <span class="menu-title">Miscellaneous</span>
+                      <i class="demo-pli-repair"></i>
+                      <span class="menu-title">Miscellaneous</span>
 											<i class="arrow"></i>
-						                </a>
+                    </a>
                     <ul class="collapse">
                       <li><a href="misc-timeline.html">Timeline</a></li>
                       <li><a href="misc-maps.html">Google Maps</a></li>
@@ -933,10 +848,10 @@
 
                   <li>
                     <a href="#">
-						                    <i class="demo-pli-warning-window"></i>
-						                    <span class="menu-title">Grid System</span>
+                      <i class="demo-pli-warning-window"></i>
+                      <span class="menu-title">Grid System</span>
 											<i class="arrow"></i>
-						                </a>
+                    </a>
                     <ul class="collapse">
                       <li><a href="grid-bootstrap.html">Bootstrap Grid</a></li>
                       <li><a href="grid-liquid-fixed.html">Liquid Fixed</a></li>
@@ -948,15 +863,14 @@
 
                   <li class="list-divider"></li>
 
-                  <!--Category name-->
                   <li class="list-header">More</li>
 
                   <li>
                     <a href="#">
-						                    <i class="demo-pli-computer-secure"></i>
-						                    <span class="menu-title">App Views</span>
+                      <i class="demo-pli-computer-secure"></i>
+                      <span class="menu-title">App Views</span>
 											<i class="arrow"></i>
-						                </a>
+                    </a>
                     <ul class="collapse">
                       <li><a href="app-file-manager.html">File Manager</a></li>
                       <li><a href="app-users.html">Users</a></li>
@@ -972,10 +886,10 @@
 
                   <li>
                     <a href="#">
-						                    <i class="demo-pli-speech-bubble-5"></i>
-						                    <span class="menu-title">Blog Apps</span>
+                      <i class="demo-pli-speech-bubble-5"></i>
+                      <span class="menu-title">Blog Apps</span>
 											<i class="arrow"></i>
-						                </a>
+                    </a>
                     <ul class="collapse">
                       <li><a href="blog.html">Blog</a></li>
                       <li><a href="blog-list.html">Blog List</a></li>
@@ -990,10 +904,10 @@
 
                   <li>
                     <a href="#">
-						                    <i class="demo-pli-mail"></i>
-						                    <span class="menu-title">Email</span>
+                      <i class="demo-pli-mail"></i>
+                      <span class="menu-title">Email</span>
 											<i class="arrow"></i>
-						                </a>
+                    </a>
                     <ul class="collapse">
                       <li><a href="mailbox.html">Inbox</a></li>
                       <li><a href="mailbox-message.html">View Message</a></li>
@@ -1005,10 +919,10 @@
 
                   <li>
                     <a href="#">
-						                    <i class="demo-pli-file-html"></i>
-						                    <span class="menu-title">Other Pages</span>
+                      <i class="demo-pli-file-html"></i>
+                      <span class="menu-title">Other Pages</span>
 											<i class="arrow"></i>
-						                </a>
+                    </a>
                     <ul class="collapse">
                       <li><a href="pages-blank.html">Blank Page</a></li>
                       <li><a href="pages-invoice.html">Invoice</a></li>
@@ -1032,10 +946,10 @@
 
                   <li>
                     <a href="#">
-						                    <i class="demo-pli-photo-2"></i>
-						                    <span class="menu-title">Gallery</span>
+                      <i class="demo-pli-photo-2"></i>
+                      <span class="menu-title">Gallery</span>
 											<i class="arrow"></i>
-						                </a>
+                    </a>
                     <ul class="collapse">
                       <li><a href="gallery-columns.html">Columns</a></li>
                       <li><a href="gallery-justified.html">Justified</a></li>
@@ -1053,10 +967,10 @@
 
                   <li>
                     <a href="#">
-                                            <i class="demo-pli-tactic"></i>
-                                            <span class="menu-title">Menu Level</span>
-                                            <i class="arrow"></i>
-                                        </a>
+                      <i class="demo-pli-tactic"></i>
+                      <span class="menu-title">Menu Level</span>
+                      <i class="arrow"></i>
+                    </a>
                     <ul class="collapse">
                       <li><a href="#">Second Level Item</a></li>
                       <li><a href="#">Second Level Item</a></li>
@@ -1086,18 +1000,16 @@
                     </ul>
                   </li>
 
-
                   <li class="list-divider"></li>
 
-                  <!--Category name-->
                   <li class="list-header">Extras</li>
 
                   <li>
                     <a href="#">
-						                    <i class="demo-pli-happy"></i>
-						                    <span class="menu-title">Icons Pack</span>
+                      <i class="demo-pli-happy"></i>
+                      <span class="menu-title">Icons Pack</span>
 											<i class="arrow"></i>
-						                </a>
+                    </a>
                     <ul class="collapse">
                       <li><a href="icons-ionicons.html">Ion Icons</a></li>
                       <li><a href="icons-themify.html">Themify</a></li>
@@ -1110,12 +1022,12 @@
 
                   <li>
                     <a href="#">
-						                    <i class="demo-pli-medal-2"></i>
-						                    <span class="menu-title">
+                      <i class="demo-pli-medal-2"></i>
+                      <span class="menu-title">
 												PREMIUM ICONS
-												<span class="label label-danger pull-right">BEST</span>
+                        <span class="label label-danger pull-right">BEST</span>
 											</span>
-						                </a>
+                    </a>
                     <ul class="collapse">
                       <li><a href="premium-line-icons.html">Line Icons Pack</a></li>
                       <li><a href="premium-solid-icons.html">Solid Icons Pack</a></li>
@@ -1125,25 +1037,20 @@
 
                   <li>
                     <a href="helper-classes.html">
-						                    <i class="demo-pli-inbox-full"></i>
-						                    <span class="menu-title">Helper Classes</span>
-						                </a>
-                  </li>
+                      <i class="demo-pli-inbox-full"></i>
+                      <span class="menu-title">Helper Classes</span>
+                    </a>
+                  </li> -->
                 </ul>
 
+                <!-- <div class="mainnav-widget">
 
-                <!--Widget-->
-                <!--================================-->
-                <div class="mainnav-widget">
-
-                  <!-- Show the button on collapsed navigation -->
                   <div class="show-small">
                     <a href="#" data-toggle="menu-widget" data-target="#demo-wg-server">
-                                            <i class="demo-pli-monitor-2"></i>
-                                        </a>
+                      <i class="demo-pli-monitor-2"></i>
+                    </a>
                   </div>
 
-                  <!-- Hide the content on collapsed navigation -->
                   <div id="demo-wg-server" class="hide-small mainnav-widget-content">
                     <ul class="list-group">
                       <li class="list-header pad-no mar-ver">Server Status</li>
@@ -1168,26 +1075,17 @@
                       <li class="pad-ver"><a href="#" class="btn btn-success btn-bock">View Details</a></li>
                     </ul>
                   </div>
-                </div>
-                <!--================================-->
-                <!--End widget-->
+                </div> -->
 
               </div>
             </div>
           </div>
-          <!--================================-->
-          <!--End menu-->
 
         </div>
       </nav>
-      <!--===================================================-->
-      <!--END MAIN NAVIGATION-->
 
     </div>
 
-
-    <!-- FOOTER -->
-    <!--===================================================-->
     <footer id="footer">
 
       <!-- Visible when footer positions are fixed -->
@@ -1198,9 +1096,9 @@
 
       <!-- Visible when footer positions are static -->
       <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-      <div class="hide-fixed pull-right pad-rgt">
+      <!--<div class="hide-fixed pull-right pad-rgt">
         14GB of <strong>512GB</strong> Free.
-      </div>
+      </div>-->
 
       <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
       <!-- Remove the class "show-fixed" and "hide-fixed" to make the content always appears. -->
@@ -1211,7 +1109,6 @@
     </footer>
     <!--===================================================-->
     <!-- END FOOTER -->
-
 
     <!-- SCROLL PAGE BUTTON -->
     <!--===================================================-->
@@ -1234,7 +1131,6 @@
   <!--BootstrapJS [ RECOMMENDED ]-->
   <script src="js/bootstrap.min.js"></script>
 
-
   <!--NiftyJS [ RECOMMENDED ]-->
   <script src="js/nifty.min.js"></script>
 
@@ -1249,10 +1145,8 @@
   <script src="plugins/flot-charts/jquery.flot.resize.min.js"></script>
   <script src="plugins/flot-charts/jquery.flot.tooltip.min.js"></script>
 
-
   <!--Sparkline [ OPTIONAL ]-->
   <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
-
 
   <!--Specify page [ SAMPLE ]-->
   <script src="js/demo/dashboard.js"></script>
