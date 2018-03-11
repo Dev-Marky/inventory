@@ -2,6 +2,8 @@
 class Vendors extends CI_Controller {
   function __construct() {
     parent::__construct();
+    
+    redirect_if(!$this->session->userdata('user_id'), 'login');
     $this->load->model('vendor_model');
   }
 
