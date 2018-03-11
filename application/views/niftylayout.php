@@ -761,6 +761,18 @@
                   <li>
                     <a href="#">
                       <i class="demo-pli-boot-2"></i>
+                      <span class="menu-title">Sales</span>
+											<i class="arrow"></i>
+                    </a>
+                    <ul class="collapse">
+                      <li><?php echo anchor('items', 'Items'); ?></li>
+                      <li><?php echo anchor('customers', 'Customers'); ?></li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="demo-pli-boot-2"></i>
                       <span class="menu-title">Purchases</span>
 											<i class="arrow"></i>
                     </a>
