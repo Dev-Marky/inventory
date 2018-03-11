@@ -7,6 +7,7 @@ class Account extends CI_Controller {
   }
 
   function login() {
+    redirect_if($this->session->userdata('user_id'), 'account/dashboard');
     $data = array('message' => '');
     if ($this->input->post()) {
       list($name, $password) = login_form();
