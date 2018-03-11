@@ -9,7 +9,7 @@ class Vendors extends CI_Controller {
 
   function index() {
     $data['vendors'] = $this->vendor_model->find_by_company($this->session->userdata('company_id'));
-    $this->load->view('vendors/index', $data);
+    $this->layout->view('vendors/index', $data);
   }
 
   function add() {
@@ -18,7 +18,7 @@ class Vendors extends CI_Controller {
       $this->vendor_model->save($vendor);
       redirect('vendors');
     }
-    $this->load->view('vendors/add');
+    $this->layout->view('vendors/add');
   }
 
   function edit($id) {
@@ -28,7 +28,7 @@ class Vendors extends CI_Controller {
       redirect('vendors');
     }
     $data['vendor'] = $this->vendor_model->read($id);
-    $this->load->view('vendors/edit', $data);
+    $this->layout->view('vendors/edit', $data);
   }
 
   function delete($id) {
