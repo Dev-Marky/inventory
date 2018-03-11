@@ -23,7 +23,7 @@ class Items extends CI_Controller {
 
   function edit($id) {
     if ($this->input->post()) {
-      $item = item_form();
+      $item = item_form($this->session->userdata('company_id'));
       $this->item_model->update($item, $id);
       redirect('items');
     }
