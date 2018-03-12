@@ -6,7 +6,9 @@ class Tracking_model extends CI_Model {
   }
 
   function find_by_company($company_id) {
-    return $this->db->get_where('trackings', array('company_id' => $company_id))->result();
+    $this->db->select('t.*, c.name customer_name');
+    $this->db->join('customers c', 'c.id = t.customer_id');
+    return $this->db->get_where('trackings t', array('t.company_id' => $company_id))->result();
   }
 
   function read($id) {

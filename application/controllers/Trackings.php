@@ -5,6 +5,7 @@ class Trackings extends CI_Controller {
     
     redirect_if(!$this->session->userdata('user_id'), 'login');
     $this->load->model('tracking_model');
+    $this->load->model('customer_model');
   }
 
   function index() {
@@ -18,7 +19,8 @@ class Trackings extends CI_Controller {
       $this->tracking_model->save($tracking);
       redirect('trackings');
     }
-    $this->layout->view('trackings/add');
+    $data['customers'] = $this->customer_model->find_by_company_for_dropdown($this->session->userdata('company_id'));
+    $this->layout->view('trackings/add', $data);
   }
 
   function edit($id) {
@@ -28,6 +30,7 @@ class Trackings extends CI_Controller {
       redirect('trackings');
     }
     $data['tracking'] = $this->tracking_model->read($id);
+    $data['customers'] = $this->customer_model->find_by_company_for_dropdown($this->session->userdata('company_id'));
     $this->layout->view('trackings/edit', $data);
   }
 
