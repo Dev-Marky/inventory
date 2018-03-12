@@ -7,6 +7,19 @@ function user_form() {
   );
 }
 
+function profile_form() {
+  $obj = &get_instance();
+  $user = array(
+    'name' => $obj->input->post('name'),
+    'username' => $obj->input->post('username'),
+    'email' => $obj->input->post('email'),
+  );
+  if ($obj->input->post('password')) {
+    $user['password'] = $obj->input->post('password');
+  }
+  return $user;
+}
+
 function login_form() {
   $obj = &get_instance();
   return array(
