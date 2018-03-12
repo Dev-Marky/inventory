@@ -655,20 +655,18 @@
                       <span class="pull-right dropdown-toggle">
                         <i class="dropdown-caret"></i>
                       </span>
-                      <p class="mnp-name">Aaron Chavez</p>
-                      <span class="mnp-desc">aaron.cha@themeon.net</span>
+                      <p class="mnp-name"><?php echo $this->session->userdata('user_name'); ?></p>
+                      <span class="mnp-desc"><?php echo $this->session->userdata('user_email'); ?></span>
                     </a>
                   </div>
                   <div id="profile-nav" class="collapse list-group bg-trans">
-                    <a href="#" class="list-group-item">
-                      <i class="demo-pli-male icon-lg icon-fw"></i> View Profile
-                    </a>
-                    <a href="#" class="list-group-item">
+                    <?php echo anchor('account/profile', '<i class="demo-pli-male icon-lg icon-fw"></i> View Profile', 'class="list-group-item"'); ?>
+                    <!-- <a href="#" class="list-group-item">
                       <i class="demo-pli-gear icon-lg icon-fw"></i> Settings
                     </a>
                     <a href="#" class="list-group-item">
                       <i class="demo-pli-information icon-lg icon-fw"></i> Help
-                    </a>
+                    </a> -->
                     <?php echo anchor('account/logout', '<i class="demo-pli-unlock icon-lg icon-fw"></i> Logout', 'class="list-group-item"'); ?>
                   </div>
                 </div>
