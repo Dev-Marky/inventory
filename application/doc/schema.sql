@@ -25,3 +25,5 @@ create table vendors(
 );
 
 alter table items drop column selling_price;
+
+alter table trackings add company_id integer;
