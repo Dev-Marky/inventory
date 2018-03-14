@@ -8,6 +8,7 @@ class Tracking_model extends CI_Model {
   function find_by_company($company_id) {
     $this->db->select('t.*, c.name customer_name');
     $this->db->join('customers c', 'c.id = t.customer_id');
+    $this->db->order_by('t.date_ordered', 'desc');
     return $this->db->get_where('trackings t', array('t.company_id' => $company_id))->result();
   }
 
