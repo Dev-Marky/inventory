@@ -38,3 +38,7 @@ create table bill_items(
   quantity double,
   amount double
 );
+
+alter table bills add company_id integer;
+
+alter table bills change customer_id vendor_id integer; 

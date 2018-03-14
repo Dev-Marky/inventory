@@ -775,6 +775,7 @@
 											<i class="arrow"></i>
                     </a>
                     <ul class="collapse">
+                      <li><?php echo anchor('bills', 'Bills'); ?></li>
                       <li><?php echo anchor('items', 'Items'); ?></li>
                       <li><?php echo anchor('vendors', 'Vendors'); ?></li>
                       <!-- <li><a href="ui-modals.html">Modals</a></li>
