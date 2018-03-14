@@ -25,3 +25,16 @@ create table vendors(
 );
 
 alter table items drop column selling_price;
+
+create table bills(
+  id integer not null primary key auto_increment,
+  date datetime,
+  customer_id integer
+);
+
+create table bill_items(
+  id integer not null primary key auto_increment,
+  bill_id integer,
+  quantity double,
+  amount double
+);
