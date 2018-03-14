@@ -53,7 +53,7 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th class="text-center">Code</th>
+                <th>Code</th>
                 <th>Name</th>
                 <th>Description</th>
                 <th>Price</th>
