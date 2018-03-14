@@ -10,7 +10,7 @@
   <div id="page-content">
 
     <div class="row">
-      <div class="col-lg-7">
+      <div>
 
         <div id="demo-panel-network" class="panel">
           <div class="panel-heading">
