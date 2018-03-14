@@ -6,6 +6,7 @@ class Item_model extends CI_Model {
   }
 
   function find_by_company($company_id) {
+    $this->db->order_by('name');
     return $this->db->get_where('items', array('company_id' => $company_id))->result();
   }
 

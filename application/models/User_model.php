@@ -6,6 +6,7 @@ class User_model extends CI_Model {
   }
 
   function find_all() {
+    $this->db->order_by('name');
     return $this->db->get('users')->result();
   }
 
