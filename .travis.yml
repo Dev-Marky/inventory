@@ -1,0 +1,12 @@
+language: php
+php:
+  - '5.6'
+  - hhvm-3.18
+branches:
+env:
+  global:
+before_script:
+  - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
+script: phpunit application/tests
+after_success:
+  - ./deploy.sh
